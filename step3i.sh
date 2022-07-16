@@ -1,5 +1,8 @@
-echo "enter the password"
-read password
+#!/bin/bash
+echo "please enter your user name: "
+read username
+
+read -p "enter the password: " password
 len="${#password}"
 if test $len -ge 8 ; then
     echo "$password" | grep -q [0-9]
@@ -24,5 +27,12 @@ if test $len -ge 8 ; then
        echo "please include the numbers in password it is weak password"   
     fi
 else
-    echo "password lenght should be greater than or equal 8 hence weak password"
+    echo "password length should be greater than or equal 8 hence weak password"
 fi
+
+read -p "please re enter your password: " repassword
+if [ $password == $repassword ] ; then
+    echo "your registration sucessfull"
+else
+    echo "please re enter your password correctly"
+fi        
