@@ -31,7 +31,7 @@ read -p "please enter your password: " pass
 if [[ ${#user} -ge 5 && "$user" == *[A-Z]* && "$user" == *[a-z]* && "$user" == *[0-9]* ]] && 
 [[ ${#pass} -ge 8 && "$pass" == *[A-Z]* && "$pass" == *[a-z]* && "$pass" == *[0-9]* && "$pass" == *[?!@$\%^\&*-]* ]]; then
 	echo "$firstname, $lastname, $user, $pass" >> $data_file 
-    echo "user name criteria fulfilled" 
+    echo "user name criteria and password criteria are fulfilled" 
 break
     exit 1
 else
